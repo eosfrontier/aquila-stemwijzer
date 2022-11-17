@@ -1,0 +1,5 @@
+@use '../variables/' as vars;
+
+@function spacing($num: 1) {
+  @return $num * vars.$spacing-base;
+}

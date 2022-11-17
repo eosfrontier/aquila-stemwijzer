@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+
+@for $i from 0 through 10 {
+
+  .gap-#{$i} {
+    gap: spacing($i);
+  }
+
+  .p-#{$i} { padding: spacing($i) }
+  .pt-#{$i} { padding-top: spacing($i) }
+  .pr-#{$i} { padding-right: spacing($i) }
+  .pb-#{$i} { padding-bottom: spacing($i) }
+  .pl-#{$i} { padding-left: spacing($i) }
+  
+  .m-#{$i} { margin: spacing($i) }
+  .mt-#{$i} { margin-top: spacing($i) }
+  .mr-#{$i} { margin-right: spacing($i) }
+  .mb-#{$i} { margin-bottom: spacing($i) }
+  .ml-#{$i} { margin-top: spacing($i) }
+
+}

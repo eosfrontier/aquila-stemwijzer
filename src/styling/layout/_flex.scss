@@ -1,0 +1,71 @@
+@use '../abstracts/' as *;
+
+@mixin -flex-directions {
+  &--row {
+    flex-direction: row;
+  }
+  &--column {
+    flex-direction: column;
+  }
+}
+
+@mixin -flex-intervals {
+  @for $i from 0 through 12 {
+    &-#{$i} {
+      flex: $i;
+    }
+  }
+
+  &-auto {
+    flex: auto;
+  }
+}
+
+.flex {
+  display: flex;
+
+  @include -flex-directions;
+
+
+  @include media--small {
+    &-sm {
+      @include -flex-directions;
+    }
+  }
+
+  @include media--medium {
+    &-md {
+      @include -flex-directions;
+    }
+  }
+
+  &-lg {
+    @include media--large {
+      @include -flex-directions;
+    }
+  }
+}
+
+.col {
+  flex: 1;
+
+  @include -flex-intervals;
+
+  @include media--small {
+    &-sm {
+      @include -flex-intervals;
+    }
+  }
+
+  @include media--medium {
+    &-md {
+      @include -flex-intervals;
+    }
+  }
+
+  &-lg {
+    @include media--large {
+      @include -flex-intervals;
+    }
+  }
+}

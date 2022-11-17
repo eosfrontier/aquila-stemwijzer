@@ -1,0 +1,23 @@
+@use '../abstracts/' as *;
+
+.navbar {
+  box-shadow: var(--navbar-shadow);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+
+  &__top {
+    flex: 6;
+    background-color: var(--navbar-top-bg);
+    color: var(--navbar-top-text);
+  }
+
+  &__bottom {
+    flex: 5;
+    background-color: var(--navbar-bottom-bg);
+    color: var(--navbar-bottom-text);
+  }
+
+
+}

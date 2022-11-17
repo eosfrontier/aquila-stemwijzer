@@ -1,0 +1,39 @@
+@use '../abstracts/' as *;
+
+@mixin -theme-light {
+  --navbar-shadow: #{$shadow-light};
+
+  --navbar-top-bg: #{$white};
+  --navbar-top-text: #{$primary-black};
+
+  --navbar-bottom-bg: #{$content-dark};
+  --navbar-bottom-text: #{$white-primary};
+  --navbar-bottom-text-active: #{$primary-blue};
+
+  --body-bg: #{$white-dimmed};
+
+  --card-bg: #{$white};
+  --card-text: #{$primary-black};
+  --card-state-line: #{$primary-blue};
+
+  --footer-bg: #{$white};
+  --footer-shadow: #{$shadow-light};
+}
+
+:root,
+[data-color-scheme='light'] {
+  @include -theme-light;
+}
+
+@mixin -theme-dark {
+  --placehold-mc-placeface: 0;
+}
+
+html[data-color-scheme='dark'],
+[data-color-scheme='dark'] {
+  @include -theme-dark;
+}
+
+// @media pref dark {
+// include dark theme
+// }

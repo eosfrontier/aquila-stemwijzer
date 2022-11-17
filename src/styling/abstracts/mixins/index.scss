@@ -1,0 +1,19 @@
+@use '../variables/' as *;
+
+@mixin media--large {
+  @media (min-width: #{$media-large-width}) {
+    @content;
+  }
+}
+
+@mixin media--medium {
+  @media (min-width: #{$media-medium-width}) and (max-width: #{media-large-width - 0.04px}) {
+    @content;
+  }
+}
+
+@mixin media--small {
+  @media (max-width: #{$media-medium-width} - 0.04px) {
+    @content;
+  }
+}
