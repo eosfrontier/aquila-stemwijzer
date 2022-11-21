@@ -15,7 +15,7 @@ function MainPage() {
         </section>
 
         <section className="container">
-          <h1>Election Guide</h1>
+          <h1>240 NT REPUBLIC ELECTIONS</h1>
         </section>
       </main>
 

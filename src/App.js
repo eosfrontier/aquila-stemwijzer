@@ -8,6 +8,7 @@ import './App.scss';
 // import FormRoot from './form/FormRoot';
 import MainPage from './pages/main';
 import PartyAboutPage from './pages/parties';
+import VoteLocationPage from './pages/voteWhere';
 
 import { PAGES } from './constants/pages';
 
@@ -19,6 +20,8 @@ function App() {
           <Route path="/" element={<MainPage />} />
           
           <Route path={PAGES.ABOUT_PARTIES.path} element={<PartyAboutPage />} />
+          
+          <Route path={PAGES.WHERE.path} element={<VoteLocationPage />} />
 
           {/* <Route path={PAGES.ADVISOR.path} element */}
 

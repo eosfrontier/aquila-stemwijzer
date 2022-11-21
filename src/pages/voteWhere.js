@@ -8,28 +8,42 @@ function VoteLocationPage() {
       <Header />
 
       <main className="container container--full">
-        <div className="container">
+        <article className="container">
           <header>
             <h1>Where can I vote?</h1>
           </header>
 
           <section className="flex flex--row gap-4">
-            <article className="col col-10">
-              <div className="row">Hmm, in een row.</div>
+            <div>
+              <h2>Disclaimer - location intel</h2>
 
-              <div className="row">Hmm, OOK in een row.</div>
-            </article>
+              <p>
+                Your connection appears to originate from a non-public
+                GaiaNet-region (<strong>(Mn/EOS)</strong>)
+              </p>
 
-            <nav className="col col-2">
-              <ul className="flex flex--column gap-2">
-                <li>Bra</li>
-                <li>Nu</li>
-                <li>Cor</li>
-                <li>Ehh</li>
-              </ul>
-            </nav>
+              <p>
+                This will likely limit/restrict the available results below.
+              </p>
+
+              <p>
+                Should the results show an entirely different planet and/or city
+                - please visit us on a public terminal, or try again later.
+              </p>
+            </div>
+
+            <div></div>
           </section>
-        </div>
+
+          <section>
+            <h2>Nearby voting stations </h2>
+            <p>1 result(s)</p>
+
+            Bastion   (bastion logo???)
+
+
+          </section>
+        </article>
       </main>
     </div>
   );

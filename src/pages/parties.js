@@ -23,10 +23,10 @@ function PartyAboutPage() {
 
             <nav className="col col-2">
               <ul className="flex flex--column gap-2">
-                <li>Bra</li>
-                <li>Nu</li>
-                <li>Cor</li>
-                <li>Ehh</li>
+                <li>Brachi</li>
+                <li>NUS</li>
+                <li>Cornu</li>
+                <li>Beccus</li>
               </ul>
             </nav>
           </section>

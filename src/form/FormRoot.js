@@ -1,27 +1,13 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
+import {
+  generateQuestionList,
+  initEmptyFlowState,
+} from './steps/step-controller';
 
-export default class FormRoot extends Component {
-  state = {
-    step: 0,
-    categories: {
-      initial: {
-        iAmNotARobot: false,
-        name: '',
-        planet: ''
-      },
-      pollQuestions: {
-        otherFactions: '',
-        poorBabyDugo: '',
-        serviceTerms: ''
-      }
-
-    }
-  };
-
-
-  render() {
-    return <div>
-      formRoot
-    </div>;
-  }
+function PollFormRoot() {
+  // set initial states
+  const [step, setStep] = useState(0);
+  const [formData, setFormData] = useState(initEmptyFlowState());
 }
+
+export default PollFormRoot;
