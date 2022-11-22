@@ -1,0 +1,24 @@
+@use '../abstracts/' as *;
+
+.poll-form {
+
+    &__category {
+        background-color: $primary-black;
+        color: $white-dimmed;
+        padding: spacing(3) spacing(4);
+    }
+
+    &__statement {
+        font-size: 2rem;
+        position: relative;
+        
+        &::before,
+        &::after
+         {
+            content: '\"';
+            color:  $primary-blue;
+            padding: 0 spacing(2);
+        }
+    }
+
+}
