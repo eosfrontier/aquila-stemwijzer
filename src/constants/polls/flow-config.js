@@ -22,7 +22,7 @@ export const POLL_STEP_ORDER = [
 
 export const POLL_CATEGORIES = [
   {
-    category: QuestionCategories.def,
+    label: QuestionCategories.Def,
     questions: [
       QuestionIds.DefenseIsolate,
       QuestionIds.DefensePrivatise,
@@ -30,7 +30,7 @@ export const POLL_CATEGORIES = [
     ],
   },
   {
-    category: QuestionCategories.ICC,
+    label: QuestionCategories.ICC,
     questions: [
       QuestionIds.InterFacCommand,
       QuestionIds.InterFacLeadingRole,
@@ -38,7 +38,7 @@ export const POLL_CATEGORIES = [
     ],
   },
   {
-    category: QuestionCategories.Gov,
+    label: QuestionCategories.Gov,
     questions: [
       QuestionIds.GovGlobalInfluence,
       QuestionIds.GovPlanetaryInfluence,
@@ -47,7 +47,7 @@ export const POLL_CATEGORIES = [
     ],
   },
   {
-    category: QuestionCategories.Finance,
+    label: QuestionCategories.Finance,
     questions: [
       QuestionIds.FinanceEducationCosts,
       QuestionIds.FinanceImportTax,
@@ -55,7 +55,7 @@ export const POLL_CATEGORIES = [
     ],
   },
   {
-    category: QuestionCategories.Culture,
+    label: QuestionCategories.Culture,
     questions: [
       QuestionIds.CultureEducateExternals,
       QuestionIds.CultureOpenWorldPolicy,
