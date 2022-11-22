@@ -11,6 +11,7 @@ import PartyAboutPage from './pages/parties';
 import VoteLocationPage from './pages/voteWhere';
 
 import { PAGES } from './constants/pages';
+import PollFormPage from "./pages/pollForm";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           
           <Route path={PAGES.WHERE.path} element={<VoteLocationPage />} />
 
-          {/* <Route path={PAGES.ADVISOR.path} element */}
+          <Route path={PAGES.ADVISOR.path} element={<PollFormPage />} />
 
           <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
