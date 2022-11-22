@@ -18,6 +18,15 @@
 
   --footer-bg: #{$white};
   --footer-shadow: #{$shadow-light};
+
+
+  --poll-top-tile-bg: #{$primary-black};
+  --poll-top-tile-text: #{$white-dimmed};
+
+  --poll-top-progress-bg: #{$primary-blue};
+
+  --poll-statement-shadow: #{$shadow-block};
+  --poll-option-shadow: #{$shadow-block};
 }
 
 :root,

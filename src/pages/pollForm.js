@@ -5,10 +5,10 @@ import PollFormRoot from '../form/FormRoot'
 function PollFormPage() {
 
     return (
-        <div className="page-root">
+        <div className="page-poll">
             <Header />
 
-            <main className='container container--full'>
+            <main className='container--full'>
                 <article className='container'>
 
                     <PollFormRoot />

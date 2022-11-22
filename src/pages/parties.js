@@ -5,10 +5,10 @@ import Header from '../components/header';
 
 function PartyAboutPage() {
   return (
-    <div className="page-root">
+    <div className="page-info">
       <Header />
 
-      <main className="container container--full">
+      <main className="container--full">
         <div className="container">
           <header>
             <h1>About the parties</h1>

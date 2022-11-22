@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+
+
+.poll-quote {
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    box-shadow: var(--poll-statement-shadow);
+    border-radius: 4px 0;
+    position: relative;
+
+    font-size: 2rem;
+    font-weight: 500;
+    padding: spacing(3) spacing(4) spacing(5) spacing(4);
+
+    @include media--medium {
+        padding-bottom: spacing(6)
+    }
+
+    @include media--large {
+        font-size: 2.2rem;
+        padding-top: spacing(4);
+        padding-right: spacing(8);
+    }
+
+
+    &::before,
+    &::after {
+        content: '\"';
+        color: $primary-blue;
+        font-weight: 700;
+    }
+
+    &::before {
+        padding-right: spacing(2);
+    }
+
+    &::after {
+        padding-left: spacing(2);
+    }
+}

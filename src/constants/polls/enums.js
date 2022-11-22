@@ -21,9 +21,9 @@ export const QuestionIds = Object.freeze({
 export const QuestionCategories = Object.freeze({
   Def: 'Defense',
   ICC: 'Interfactional Cooperation',
-  Gov: 'Structure & Foundations of Government',
+  Gov: 'Structure of Government',
   Finance: 'Budget/Finances',
-  Culture: 'Aquila Culture & Arts'
+  Culture: 'Culture & The Arts'
 })
 
 export const PoliticalParties = Object.freeze({

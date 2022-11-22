@@ -6,10 +6,10 @@ import {HomePageCards} from '../components/homepage-cards';
 
 function MainPage() {
   return (
-    <div className="page-root">
+    <div className="page-home">
       <Header />
 
-      <main className="container container--full">
+      <main className="container--full">
         <section className="container flex gap-4 mb-4">
           {HomePageCards()}
         </section>

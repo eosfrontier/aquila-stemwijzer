@@ -4,10 +4,10 @@ import Header from '../components/header';
 
 function VoteLocationPage() {
   return (
-    <div className="page-root">
+    <div className="page-info">
       <Header />
 
-      <main className="container container--full">
+      <main className="container--full">
         <article className="container">
           <header>
             <h1>Where can I vote?</h1>

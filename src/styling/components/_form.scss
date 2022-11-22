@@ -1,0 +1,70 @@
+@use '../abstracts/' as *;
+
+.form-radio {
+    cursor: pointer; 
+    color: $white-dimmed;
+    font-weight: 500;
+    user-select: none;
+
+    background-color: $primary-black;
+    border-bottom: spacing(1) solid $primary-black;
+    box-shadow: var(--poll-option-shadow);
+    padding: spacing(3) spacing(2) spacing(3) spacing(10);
+    position: relative;
+    transition: 0.25s;
+    width: 100%;
+
+    > span {
+        position: absolute;
+        background-color: $white-dimmed;
+        border-radius: 100%;
+        top: 15px;
+        left: 12px;
+        height: 18px;
+        width: 18px;
+
+        &::before {
+            // inner dot (radio)
+            content: "";
+            border-radius: 100%;
+            background-color: $white-dimmed;
+            transition: 0.25s;
+            display: block;
+            margin: 3px;
+            height: 12px;
+            width: 12px;
+        }
+    }
+
+
+    &:hover {
+        border-color: $primary-blue;
+
+        > span::before {
+            background-color: $primary-blue;
+        }
+    }
+
+    input[type=radio] {
+        @include visually-hidden;
+
+        &:checked ~ span {
+            background-color: $primary-blue;
+            background-image: url('../../../public/vectors/checkmark.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 0;
+            transition: none;
+            
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &--checked {
+        background-color: $primary-blue;
+        border-color: $primary-blue;
+    }
+
+}

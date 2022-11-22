@@ -1,24 +1,48 @@
 @use '../abstracts/' as *;
 
-.poll-form {
 
-    &__category {
-        background-color: $primary-black;
-        color: $white-dimmed;
-        padding: spacing(3) spacing(4);
+.poll-top {
+    display: flex;
+    flex-direction: row;
+    gap: spacing(1);
+    margin-bottom: spacing(2);
+
+    &__tile {
+        background-color: var(--poll-top-tile-bg);
+        color: var(--poll-top-tile-text);
+
+        display: inline-block;
+        min-width: 36px;
+        text-align: center;
+        padding: spacing(2);
     }
 
-    &__statement {
-        font-size: 2rem;
-        position: relative;
-        
-        &::before,
-        &::after
-         {
-            content: '\"';
-            color:  $primary-blue;
-            padding: 0 spacing(2);
+    &__progress {
+        background-color: var(--poll-top-progress-bg);
+    }
+
+    &__category {
+        padding: spacing(2) spacing(4);
+
+        @include media--medium {
+            padding-right: spacing(12);
         }
+    }
+
+}
+
+.poll-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: spacing(4);
+    margin-bottom: spacing(4);
+
+    @include media--medium {
+        display: flex;
+        flex-direction: column;
+        gap: spacing(4);
+        margin-bottom: 0;
     }
 
 }

@@ -22,9 +22,6 @@ function PollFormRoot() {
     setFormData({ ...formData, [input]: e.target.value })
   }
 
-
-  console.log(formData)
-
   switch (step) {
 
     case 0:
