@@ -12,47 +12,60 @@ function PartyAboutPage() {
             <h1>The Parties/Candidate</h1>
           </header>
 
-
-
           <section className="parties__content">
-            <article className="flex flex--column gap-4 col col-10">
+            <article className="flex flex--column gap-4">
+              {/*  */}
               <div className="card card__body--large">
-                <h2>Brachi</h2>
-                <p>(Last updated: 25-04-240NT)</p>
+                <div className="flex gap-4">
+                  <div className="col-2">
+                    <img src="/vectors/brachi.svg" alt="logo Brachi" />
+                  </div>
+                  <div className="col-6">
+                    <h2>Brachi</h2>
+                    <p>(Last updated: 25-04-240NT)</p>
+                  </div>
+                </div>
+              </div>
+              {/*  */}
+              <div className="card card__body--large">
+                <div className="flex gap-4">
+                  <div className="col-2">
+                    <img src="/vectors/cornu.svg" alt="logo Cornu" />
+                  </div>
+                  <div className="col-6">
+                    <h2>Cornu</h2>
+                    <p>(Last updated: 25-04-240NT)</p>
+                  </div>
+                </div>
+              </div>
+              {/*  */}
+              <div className="card card__body--large">
+                <div className="flex gap-4">
+                  <div className="col-2">
+                    <img src="/vectors/nus.svg" alt="logo NUS" />
+                  </div>
+                  <div className="col-6">
+                    <h2>NUS</h2>
+                    <p>(Last updated: 25-04-240NT)</p>
+                  </div>
+                </div>
+              </div>
+              {/*  */}
+              <div className="card card__body--large">
+                <div className="flex gap-4">
+                  <div className="col-2">
+                    <img src="/vectors/beccus.svg" alt="logo the Beccus" />
+                  </div>
+                  <div className="col-6">
+                    <h2>Beccus</h2>
+                    <p>(Last updated: 25-04-240NT)</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="card card__body--large">
-                <h2>Cornu</h2>
-                <p>(Last updated: 25-04-240NT)</p>
-              </div>
-
-              <div className="card card__body--large">
-                <h2>NUS</h2>
-                <p>(Last updated: 25-04-240NT)</p>
-              </div>
-
-              <div className="card card__body--large">
-                <h2>Beccus</h2>
-                <p>(Last updated: 25-04-240NT)</p>
-              </div>
+              {/*  */}
             </article>
 
-            <nav className="col col-2 col-md-3 col-lg-2">
-              <ul className="parties__sidenav">
-                <li>
-                  <img src="/vectors/brachi.svg" alt="logo Brachi" />
-                </li>
-                <li>
-                  <img src="/vectors/cornu.svg" alt="logo Cornu" />
-                </li>
-                <li>
-                  <img src="/vectors/nus.svg" alt="logo Nus" />
-                </li>
-                <li>
-                  <img src="/vectors/beccus.svg" alt="logo Beccus" />
-                </li>
-              </ul>
-            </nav>
           </section>
         </div>
       </main>
