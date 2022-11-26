@@ -1,10 +1,10 @@
 import React from 'react';
 
 const options = [
-  {affix: 'sa', text: 'Strongly agree', value: 1},
-  {affix: 'a', text: 'Agree', value: 0.5},
-  {affix: 'da', text: 'Disagree', value: -0.5},
-  {affix: 'sda', text: 'Strongly disagree', value: -1},
+  {affix: 'sa', text: 'Strongly agree', value: 2},
+  {affix: 'a', text: 'Agree', value: 1},
+  {affix: 'da', text: 'Disagree', value: -1},
+  {affix: 'sda', text: 'Strongly disagree', value: -2},
 ];
 
 const PollQuestion = ({
@@ -28,6 +28,7 @@ const PollQuestion = ({
 
   const isChecked = (opt) =>
     formState[_current.questionId] === opt.value.toString();
+    
   const completionPercentage = () => {
     const percentage = ((step - 1) / questionList.length) * 100;
     return `${Math.round(percentage)}%`;
@@ -40,8 +41,8 @@ const PollQuestion = ({
       : 'form-radio';
 
     return (
-      <div className={`option-${opt.affix}`}>
-        <label key={index} className={radioState} htmlFor={htmlId}>
+      <div key={index} className={`option-${opt.affix}`}>
+        <label className={radioState} htmlFor={htmlId}>
           <input
             type="radio"
             name={_current.questionId}

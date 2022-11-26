@@ -56,7 +56,7 @@ function MainPage() {
               <li>
                 <strong>Get ready</strong>
                 <span>
-                  - find out where You can vote early, and stay up to date on
+                  - find out where you can vote early, and stay up to date on
                   local news.
                 </span>
               </li>

@@ -1,6 +1,33 @@
 @use '../abstracts/' as *;
 
 
+.poll-start {
+    background-color: $white;
+    box-shadow: var(--poll-statement-shadow);
+    margin-top: spacing(4);
+    padding: spacing(4);
+
+    p {
+        font-size: 1.8rem;
+    }
+
+    h1 {
+        background-color: var(--poll-top-tile-bg);
+        color: var(--poll-top-tile-text);
+        margin-left: spacing(-4);
+        margin-top: spacing(-8);
+        padding: spacing(2) spacing(10) spacing(2) spacing(6);
+        width: fit-content;
+    }
+
+    button {
+        margin-top: spacing(2);
+    }
+
+}
+
+
+
 .poll-top {
     display: flex;
     flex-direction: row;

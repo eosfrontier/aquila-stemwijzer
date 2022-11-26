@@ -1,5 +1,7 @@
 import { POLL_CATEGORIES, POLL_STEP_ORDER } from '../../constants/polls/flow-config';
 import { POLL_QUESTIONS } from '../../constants/polls/flow-questions';
+import { POLL_PARTY_MODIFIERS } from '../../constants/polls/party-modifiers';
+
 
 
 export function getQuestionCategory(questionId) {
@@ -12,6 +14,15 @@ export function getQuestionText(questionId) {
 
   } catch {
     throw new Error(`ERR: No Question/Statement found for ${questionId}`)
+  }
+}
+
+export function getPartyModifiers(questionId) {
+  try {
+    return POLL_PARTY_MODIFIERS[questionId];
+
+  } catch {
+    throw new Error(`ERR: No Party Modifiers found for ${questionId}`)
   }
 }
 
@@ -29,7 +40,8 @@ export function generateQuestionList() {
       step: index + 1,
       questionId,
       category: getQuestionCategory(questionId),
-      statement: getQuestionText(questionId)
+      statement: getQuestionText(questionId),
+      partyModifiers: getPartyModifiers(questionId)
     };
   });
 }
@@ -41,13 +53,3 @@ export function initEmptyFlowState() {
   return _state;
 }
 
-/* 
-...
-  statement: 'fullText',
-  partyModifiers: {
-    brachi: 0,
-    cornu: 0,
-    beccus: 0,
-    nus: 0,
-  },
-*/

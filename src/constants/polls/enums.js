@@ -26,7 +26,7 @@ export const QuestionCategories = Object.freeze({
   Culture: 'Culture & The Arts'
 })
 
-export const PoliticalParties = Object.freeze({
+export const Candidates = Object.freeze({
   Bec: "Beccus",
   Bra: "Brachi",
   Cor: "Cornu",

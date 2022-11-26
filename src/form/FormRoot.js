@@ -19,6 +19,14 @@ function PollFormRoot() {
   const prevStep = () => setStep(step - 1)
 
   const handleChange = input => e => {
+    // const _temp = pollQuestions[step].partyModifiers;
+    // const _x = e.target.value;
+
+    // console.log('--scores');
+    // console.log(_temp.Beccus * _x);
+    // console.log(_temp.Cornu * _x);
+    // console.log(_temp.Brachi * _x);
+    // console.log(_temp.NUS * _x);
     setFormData({ ...formData, [input]: e.target.value })
   }
 
@@ -26,15 +34,16 @@ function PollFormRoot() {
 
     case 0:
       return (
-        <>
+        <div className='poll-start'>
           <h1>VoteMatch</h1>
 
           <p>VoteMatch will display a series of question/statements relating to the current election.</p>
-          <p>At the end your answers will be compared to the candidate's.</p>
+
+          <p>At the end your answers will be compared to those of the parties to check how your values align with theirs.</p>
 
           <button type="button" onClick={nextStep} className="button button--primary">Start</button>
 
-        </>
+        </div>
       )
     case pollEndNumber:
       return (
