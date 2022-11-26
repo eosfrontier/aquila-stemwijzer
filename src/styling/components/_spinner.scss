@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+
+.spinner {
+  animation: spin linear 1.2s infinite;
+  background: none;
+
+  border: 8px solid $primary-blue;
+  border-radius: 100%;
+  border-right-color: rgba($primary-blue, 0.74);
+  border-bottom-color: rgba($primary-blue, 0.87);
+  border-top-color: rgba($primary-blue, 0.17);
+
+
+  height: 64px;
+  width: 64px;
+}

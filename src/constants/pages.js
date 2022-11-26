@@ -15,8 +15,8 @@ export const PAGES = {
       path: "parties"
     },
     ADVISOR: {
-      title: "((kieswijzer))",
-      titleShort: "((Kies))",
+      title: "VoteMatch",
+      titleShort: "Vote Match",
       path: "adv"
     }
   }

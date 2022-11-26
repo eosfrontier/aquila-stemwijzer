@@ -7,6 +7,13 @@
   height: auto;
   width: 100%;
 
+  &__logo {
+    color: var(--navbar-top-text);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: spacing(2);
+  }
+
   &__top {
     flex: 6;
     background-color: var(--navbar-top-bg);
@@ -17,6 +24,19 @@
     flex: 5;
     background-color: var(--navbar-bottom-bg);
     color: var(--navbar-bottom-text);
+    font-size: 1.2rem;
+
+    @include media--medium {
+      font-size: 1.6rem;
+    }
+
+    a {
+      color: var(--navbar-bottom-text);
+
+      &:hover, &:focus, &:active {
+        color: $primary-olive;
+      }
+    }
   }
 
 

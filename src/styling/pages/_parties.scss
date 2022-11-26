@@ -1,0 +1,51 @@
+@use '../abstracts/' as *;
+// flex flex--column gap-2
+
+.page-info {
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+
+.parties {
+  &__content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: spacing(4);
+
+    @include media--medium {
+      flex-direction: row;
+    }
+  }
+
+
+
+
+  &__sidenav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: spacing(2);
+
+    @include media--medium {
+      gap: spacing(4);
+      flex-direction: column;
+      align-items: unset;
+    }
+
+
+    img {
+      max-height: 80px;
+      width: auto;
+
+      @include media--medium {
+        max-height: 100px;
+      }
+    }
+
+    li {
+      flex: 1;
+      text-align: center;
+    }
+  }
+}

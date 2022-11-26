@@ -1,0 +1,109 @@
+@use '../abstracts/' as *;
+
+button,
+.button {
+  background-color: $white;
+  border: 1px solid rgba($content-light, 0.5);
+  color: $primary-black;
+
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  padding: 1.2rem 2.8rem 1.4rem;
+
+  font-weight: bold;
+  line-height: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+
+  transition: 0.25s;
+
+  &a {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: darken($white-dimmed, 2%);
+  }
+
+  &:active {
+    background-color: darken($white-dimmed, 5%);
+  }
+
+
+  @include reduce-motion() {
+    transition: 0.4s;
+  }
+
+  &--primary {
+
+    background-color: $primary-blue;
+    border-color: $primary-blue;
+    color: $white;
+
+    &:focus,
+    &:hover {
+      background-color: darken($primary-blue, 5%);
+      border-color: darken($primary-blue, 8%);
+    }
+
+    &:active {
+      background-color: darken($primary-blue, 10%);
+      border-color: darken($primary-blue, 13%);
+    }
+  }
+
+
+}
+
+/*
+
+ border-radius: 20px;
+  color: $color-button-text;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  line-height: 1.6rem;
+  padding: 1rem 2.4rem 1.2rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include transition--fast;
+
+  // remove URL underline
+  &a {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: $color-light-grey;
+    border-color: $color-light-grey;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+
+    &:focus,
+    &:hover {
+      background-color: darken($color-primary, 5%);
+      border-color: darken($color-primary, 5%);
+    }
+
+    &:active {
+      background-color: darken($color-primary, 10%);
+      border-color: darken($color-primary, 10%);
+    }
+  }
+
+  */

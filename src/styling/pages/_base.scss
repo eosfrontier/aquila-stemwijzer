@@ -13,8 +13,6 @@
 
 .page-home {
   @extend %page-defaults;
-
-  grid-template-rows: auto 1fr 150px;
 }
 
 .page-poll {

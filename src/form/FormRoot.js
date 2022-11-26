@@ -8,8 +8,8 @@ import PollQuestion from './FormPollQuestion';
 
 function PollFormRoot() {
   // set initial states
-  const [step, setStep] = useState(1);
-  // const [step, setStep] = useState(0);
+
+  const [step, setStep] = useState(0);
   const [formData, setFormData] = useState(initEmptyFlowState());
 
   const pollQuestions = generateQuestionList()
@@ -26,7 +26,15 @@ function PollFormRoot() {
 
     case 0:
       return (
-        <p>Start?</p>
+        <>
+          <h1>VoteMatch</h1>
+
+          <p>VoteMatch will display a series of question/statements relating to the current election.</p>
+          <p>At the end your answers will be compared to the candidate's.</p>
+
+          <button type="button" onClick={nextStep} className="button button--primary">Start</button>
+
+        </>
       )
     case pollEndNumber:
       return (

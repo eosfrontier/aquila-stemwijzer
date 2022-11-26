@@ -1,0 +1,77 @@
+@use '../abstracts/' as *;
+
+
+
+// Frame Timer variables: Determining the animation timing
+// to prevent flickering browser screens, unwanted rave parties
+// and just having it as a a smooth gimmick rather than annoyance.
+$-frame-speed-display: 0.04s;
+
+$-frame-speed-fade: 0.4s;
+$-frame-speed-fade-polite: ($-frame-speed-fade * 1.15);
+
+$-frame-divider: ($-frame-speed-display * 1.25);
+
+$-delay-outgoing: 1.8s;
+$-delay-incoming: ($-delay-outgoing + $-frame-divider);
+
+
+
+.where-results {
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  img {
+    border-radius: 4px;
+    margin: 0 spacing(4) 0 0;
+
+    @include media--medium {
+      margin: 0;
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+
+}
+
+
+
+.where-page-animations {
+
+  .frame-init__fade {
+    opacity: 0;
+    animation: fade linear $-frame-speed-fade forwards;
+
+    @include reduce-motion {
+      opacity: 1;
+      animation: none;
+    }
+  }
+
+  .frame-init__block {
+    animation: removeFromView $-frame-speed-display linear forwards;
+    overflow: hidden;
+    animation-delay: $-delay-outgoing;
+
+    @include reduce-motion {
+      display: none;
+      animation: none;
+    }
+  }
+
+  .frame-second {
+    opacity: 0;
+
+    animation: fade ease-in $-frame-speed-fade forwards;
+    animation-delay: $-delay-incoming;
+
+    @include reduce-motion {
+      animation-duration: $-frame-speed-fade-polite;
+      animation-delay: 0s;
+    }
+  }
+
+}

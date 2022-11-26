@@ -16,6 +16,6 @@
   .mt-#{$i} { margin-top: spacing($i) }
   .mr-#{$i} { margin-right: spacing($i) }
   .mb-#{$i} { margin-bottom: spacing($i) }
-  .ml-#{$i} { margin-top: spacing($i) }
+  .ml-#{$i} { margin-left: spacing($i) }
 
 }

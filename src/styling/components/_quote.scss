@@ -10,16 +10,15 @@
 
     font-size: 2rem;
     font-weight: 500;
-    padding: spacing(3) spacing(4) spacing(5) spacing(4);
+    padding: spacing(6) spacing(4) spacing(7) spacing(4);
 
     @include media--medium {
-        padding-bottom: spacing(6)
+        padding-left: spacing(5);
+        padding-right: spacing(5);
     }
 
     @include media--large {
         font-size: 2.2rem;
-        padding-top: spacing(4);
-        padding-right: spacing(8);
     }
 
 

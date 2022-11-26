@@ -33,6 +33,21 @@
     :hover > & {
       border-color: var(--card-state-line);
     }
+
+    @include media--medium {
+      height: 150px;
+    }
+  }
+
+  &__body--large {
+    background-color: var(--card-bg);
+    transition: 0.25s;
+    padding: spacing(4);
+    white-space: pre-line;
+  }
+
+  &__body--disclaimer {
+    background-color: $primary-olive;
   }
 
   &__hero-container {
