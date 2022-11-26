@@ -38,7 +38,9 @@
     }
 
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-within {
         border-color: $primary-blue;
 
         > span::before {
