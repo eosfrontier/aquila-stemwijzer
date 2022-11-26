@@ -1,121 +1,109 @@
 import { QuestionIds, Candidates } from './enums';
 
 
-
-function testRandOpinion() {
-    const min = Math.ceil(-5);
-    const max = Math.floor(5);
-    let _score = Math.floor(Math.random() * (max - min) + min);
-
-    if (_score === 0) _score = 1;
-    return _score;
-
-}
-
 export const POLL_PARTY_MODIFIERS = {
     [QuestionIds.DefenseIsolate]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 4,
+        [Candidates.Cor]: 3,
+        [Candidates.Bec]: 5,
+        [Candidates.Nus]: 1
     },
-
     [QuestionIds.DefensePrivatise]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: -1,
+        [Candidates.Cor]: 5,
+        [Candidates.Bec]: -3,
+        [Candidates.Nus]: 2
     },
     [QuestionIds.DefenseXenoWarEffort]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 2,
+        [Candidates.Cor]: 3,
+        [Candidates.Bec]: -5,
+        [Candidates.Nus]: 5
     },
     [QuestionIds.FinanceImportTax]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 5,
+        [Candidates.Cor]: -2,
+        [Candidates.Bec]: 1,
+        [Candidates.Nus]: -3
     },
     [QuestionIds.InterFacLeadingRole]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 3,
+        [Candidates.Cor]: 5,
+        [Candidates.Bec]: -5,
+        [Candidates.Nus]: 4
     },
     [QuestionIds.InterFacCommand]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 4,
+        [Candidates.Cor]: 4,
+        [Candidates.Bec]: -3,
+        [Candidates.Nus]: 5
     },
     [QuestionIds.InterFacOurValues]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 5,
+        [Candidates.Cor]: 0,
+        [Candidates.Bec]: 3,
+        [Candidates.Nus]: -2
     },
     [QuestionIds.GovGlobalInfluence]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 4,
+        [Candidates.Cor]: 3,
+        [Candidates.Bec]: -3,
+        [Candidates.Nus]: -2
     },
     [QuestionIds.GovPlanetaryInfluence]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: -3,
+        [Candidates.Cor]: 3,
+        [Candidates.Bec]: 4,
+        [Candidates.Nus]: 2
     },
     [QuestionIds.PortalInfrastructure]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 4,
+        [Candidates.Cor]: 5,
+        [Candidates.Bec]: -3,
+        [Candidates.Nus]: 5
     },
     [QuestionIds.GovOwnedCorps]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: -4,
+        [Candidates.Cor]: -3,
+        [Candidates.Bec]: 5,
+        [Candidates.Nus]: -3
     },
     [QuestionIds.CultureEducateExternals]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 5,
+        [Candidates.Cor]: 3,
+        [Candidates.Bec]: 3,
+        [Candidates.Nus]: -2
     },
     [QuestionIds.CultureOpenWorldPolicy]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: -4,
+        [Candidates.Cor]: 3,
+        [Candidates.Bec]: 1,
+        [Candidates.Nus]: 2
     },
     [QuestionIds.CultureIntegrateExternals]:
     {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: -5,
+        [Candidates.Cor]: 5,
+        [Candidates.Bec]: -3,
+        [Candidates.Nus]: 5
     },
     [QuestionIds.CultureScienceLead]:
     {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 2,
+        [Candidates.Cor]: 5,
+        [Candidates.Bec]: -3,
+        [Candidates.Nus]: 4
     },
     [QuestionIds.FinanceEducationCosts]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 3,
+        [Candidates.Cor]: 5,
+        [Candidates.Bec]: -5,
+        [Candidates.Nus]: 1
     },
     [QuestionIds.GovMairsInfluence]: {
-        [Candidates.Bec]: testRandOpinion(),
-        [Candidates.Bra]: testRandOpinion(),
-        [Candidates.Cor]: testRandOpinion(),
-        [Candidates.Nus]: testRandOpinion()
+        [Candidates.Bra]: 2,
+        [Candidates.Cor]: 1,
+        [Candidates.Bec]: -5,
+        [Candidates.Nus]: 1
     },
 };
