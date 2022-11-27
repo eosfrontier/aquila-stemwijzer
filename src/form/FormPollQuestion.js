@@ -44,6 +44,7 @@ const PollQuestion = ({
       <div key={index} className={`option-${opt.affix}`}>
         <label className={radioState} htmlFor={htmlId}>
           <input
+            tabIndex={1}
             type="radio"
             name={_current.questionId}
             checked={isChecked(opt)}
@@ -88,7 +89,12 @@ const PollQuestion = ({
           <nav className="row poll-buttons">
             <span>
               {step > 1 && (
-                <button onClick={Previous} type="button" className="button">
+                <button 
+                  onClick={Previous}
+                  tabIndex={3}
+                  type="button" 
+                  className="button"
+                >
                   Back
                 </button>
               )}
@@ -97,6 +103,7 @@ const PollQuestion = ({
               {formState[_current.questionId] && (
                 <button
                   onClick={Continue}
+                  tabIndex={2}
                   type="button"
                   className="button button--primary"
                 >

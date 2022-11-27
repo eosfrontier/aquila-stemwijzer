@@ -11,8 +11,11 @@
     border-bottom: spacing(1) solid $primary-black;
     box-shadow: var(--poll-option-shadow);
     padding: spacing(3) spacing(2) spacing(3) spacing(10);
+    outline: 2px solid transparent;
     position: relative;
     transition: 0.25s;
+
+    height: 100%;
     width: 100%;
 
     > span {
@@ -62,6 +65,10 @@
             &::before {
                 display: none;
             }
+        }
+
+        &:focus-visible ~ span {
+            outline: 2px solid $primary-black;
         }
     }
 

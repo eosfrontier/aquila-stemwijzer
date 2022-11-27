@@ -6,7 +6,7 @@ const BottomNavContent = () => {
   const { pathname } = useLocation();
 
   if (pathname !== '' && pathname !== PAGES.HOME.path) {
-    return <NavLink to={PAGES.HOME.path}>Return to homepage</NavLink>
+    return <NavLink tabIndex={4} to={PAGES.HOME.path}>Return to homepage</NavLink>
   } else {
     return <span>Approved by the Interplanetair kiescomité der Aquila Republiek</span>
   }
@@ -20,7 +20,7 @@ function Header() {
     <header className="navbar">
       <section className="navbar__top">
         <div className="container">
-            <NavLink className="navbar__logo" to={PAGES.HOME.path}>ProDEM</NavLink>
+            <NavLink className="navbar__logo" tabIndex={4} to={PAGES.HOME.path}>ProDEM</NavLink>
         </div>
       </section>
 
