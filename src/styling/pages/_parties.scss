@@ -5,17 +5,39 @@
   h1 {
     font-size: 2.8rem;
   }
+
+  ol {
+    padding-left: 2.4rem;
+  }
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  .card {
+    padding-top: spacing(4);
+    padding-bottom: spacing(10);
+  }
 }
 
 .parties {
-  // &__content {
-  //   display: flex;
-  //   flex-direction: column-reverse;
-  //   gap: spacing(4);
+  &__intro {
+    font-size: 2rem;
+    margin-bottom: spacing(8);
+  }
 
-  //   @include media--medium {
-  //     flex-direction: row;
-  //   }
-  // }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(4);
+  }
 
+
+  &__logo {
+    display: inline-flex;
+
+    > img {
+      max-height: 240px;
+    }
+  }
 }
