@@ -1,0 +1,186 @@
+@use '../abstracts/' as *;
+
+
+
+$-delay-frame: 1.2s;
+$-delay-tick: 0.1s;
+
+$-line-style: 3px solid rgba($primary-black, 0.25);
+
+.page-results {
+
+    .load-first {
+        animation: removeFromView $-delay-tick linear forwards;
+        animation-delay: $-delay-frame;
+    }
+
+    .load-second {
+        opacity: 0;
+        animation: fade 0.4s ease-in-out forwards;
+        animation-delay: $-delay-frame;
+    }
+
+    .spinner {
+        margin: spacing(4) auto;
+    }
+
+    h1 {
+        background-color: var(--poll-top-tile-bg);
+        color: var(--poll-top-tile-text);
+        padding: spacing(1) spacing(10) spacing(2) spacing(6);
+        margin-bottom: 0;
+        position: relative;
+        width: fit-content;
+
+        &::after {
+            content: '';
+            background-color: var(--body-bg);
+            position: absolute;
+            right: -13px;
+            bottom: -13px;
+            height: 24px;
+            width: 24px;
+            transform: rotate(45deg);
+        }
+    }
+
+    .progress__inner {
+        animation: fill-width 1.5s ease-out forwards;
+    }
+        
+    .result {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: spacing(2);
+        position: relative;
+        min-height: spacing(16);
+        transition: 0.3s;
+
+        > img {
+            max-width: 100px;
+            max-height: 40px;
+            margin-bottom: spacing(1);
+        }
+
+        > p {
+            flex: 1;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+
+            background-color: var(--body-bg);
+            left: (spacing(-6) + 1px);
+            border-top: $-line-style;
+            border-right: $-line-style;
+            transform: rotate(45deg);
+
+            height: 13px;
+            width: 13px;
+        }
+
+        @include media--medium {
+            align-items: flex-end;
+            gap: spacing(4);
+            
+            > p {
+                font-size: 2.4rem;
+                margin-bottom: 1rem;
+            }
+
+            > img {
+                max-height: 50px;
+                max-width: 150px;
+                margin: spacing(2);
+                margin-bottom: spacing(3);
+            }
+        }
+    }
+
+    .result-bar {
+        border-left: $-line-style;
+        margin-left: 0;
+        padding: spacing(4);
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: var(--body-bg);
+            transform: rotate(45deg);
+            bottom: 2px;
+            left: -13px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .result-overview {
+        background-color: $white;
+        padding: spacing(4);
+
+        h2 {
+            font-weight: 500;
+        }
+
+        &__quote {
+            color: rgba($primary-black, 0.7);
+        }
+
+        &__row {
+            border-top: 1px dotted $content-light;
+            padding: spacing(4);
+        }
+
+        &__answer {
+            font-size: 1.8rem;
+
+            strong {
+                color: $primary-blue;
+            }
+        }
+
+        ul {
+            padding-left: 24px;
+            list-style-type: disc;
+            margin-bottom: spacing(3);
+        }
+
+        &__score {
+            border-radius: 8px;
+            font-weight: 500;
+            padding: spacing(2);
+            text-align: center;
+
+            &.plus {
+                background-color: $status-green;
+
+                &-half {
+                    background-color: rgba($status-green, 0.7);
+                    filter: grayscale(0.4);
+                }
+            }
+            &.min {
+                background-color: $status-red;
+
+                &-half {
+                    background-color: rgba($status-red, 0.7);
+                    filter: grayscale(0.4);
+                }
+            }
+            &.zero {
+                background-color: $primary-olive;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

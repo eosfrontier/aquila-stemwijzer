@@ -1,0 +1,29 @@
+@use '../abstracts/' as *;
+
+.progress {
+    background-color: rgba($content-light, 0.3);
+    border-radius: 2px;
+    border: 1px solid $primary-black;
+    height: 100%;
+    width: 100%;
+
+    &__inner {
+        color: $white-dimmed;
+        font-weight: 500;
+        min-height: 24px;
+        padding: spacing(2) 0;
+
+        &.Beccus {
+            background-color: $color-beccus;
+        }
+        &.Brachi {
+            background-color: $color-brachi;
+        }
+        &.NUS {
+            background-color: $color-nus;
+        }
+        &.Cornu {
+            background-color: $color-cornu;
+        }
+    }
+}

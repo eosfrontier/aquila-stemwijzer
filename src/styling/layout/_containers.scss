@@ -16,6 +16,12 @@
   &--full {
     max-width: 100%;
   }
+
+  &--smaller {
+    @include media--large {
+      max-width: ($media-medium-width - spacing(8));
+    }
+  }
 }
 
 .row {

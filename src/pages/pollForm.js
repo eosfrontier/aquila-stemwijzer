@@ -9,7 +9,7 @@ function PollFormPage() {
             <Header />
 
             <main className='container--full'>
-                <article className='container'>
+                <article>
 
                     <PollFormRoot />
 

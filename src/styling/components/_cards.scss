@@ -63,11 +63,20 @@
     width: 100%;
 
     background-position-y: 75%;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
+
+    @include reduce-motion {
+      transition: 0;
+    }
   }
 
+  a:focus-visible &__hero-image,
   &:hover &__hero-image {
     transform: scale(1.02);
+  }
+
+  a:focus-visible &__body {
+    border-color: var(--card-state-line);
   }
 
 }

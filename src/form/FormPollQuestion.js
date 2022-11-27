@@ -1,10 +1,10 @@
 import React from 'react';
 
 const options = [
-  {affix: 'sa', text: 'Strongly agree', value: 2},
-  {affix: 'a', text: 'Agree', value: 1},
-  {affix: 'da', text: 'Disagree', value: -1},
-  {affix: 'sda', text: 'Strongly disagree', value: -2},
+  { affix: 'sa', text: 'Strongly agree', value: 1 },
+  { affix: 'a', text: 'Agree', value: 0.5 },
+  { affix: 'da', text: 'Disagree', value: -0.5 },
+  { affix: 'sda', text: 'Strongly disagree', value: -1 },
 ];
 
 const PollQuestion = ({
@@ -28,11 +28,26 @@ const PollQuestion = ({
 
   const isChecked = (opt) =>
     formState[_current.questionId] === opt.value.toString();
-    
+
   const completionPercentage = () => {
     const percentage = ((step - 1) / questionList.length) * 100;
     return `${Math.round(percentage)}%`;
   };
+
+  const renderNextButton = () => {
+    const innerText = step == questionList.length ? 'Complete' : 'Next'
+
+    if (formState[_current.questionId]) {
+      return (<button
+        onClick={Continue}
+        tabIndex={2}
+        type="button"
+        className="button button--primary"
+      >
+        {innerText}
+      </button>)
+    }
+  }
 
   const RadioButtons = options.map((opt, index) => {
     const htmlId = `${_current.questionId}-${opt.affix}`;
@@ -62,7 +77,7 @@ const PollQuestion = ({
   });
 
   return (
-    <>
+    <div className='container container--smaller'>
       <aside className="row poll-top">
         <span className="poll-top__tile poll-top__category">
           {_current.category.label}
@@ -89,10 +104,10 @@ const PollQuestion = ({
           <nav className="row poll-buttons">
             <span>
               {step > 1 && (
-                <button 
+                <button
                   onClick={Previous}
                   tabIndex={3}
-                  type="button" 
+                  type="button"
                   className="button"
                 >
                   Back
@@ -100,21 +115,12 @@ const PollQuestion = ({
               )}
             </span>
             <span>
-              {formState[_current.questionId] && (
-                <button
-                  onClick={Continue}
-                  tabIndex={2}
-                  type="button"
-                  className="button button--primary"
-                >
-                  Next
-                </button>
-              )}
+              {renderNextButton()}
             </span>
           </nav>
         </form>
       </article>
-    </>
+    </div>
   );
 };
 

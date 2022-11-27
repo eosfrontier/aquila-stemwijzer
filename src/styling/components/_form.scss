@@ -40,15 +40,19 @@
         }
     }
 
-
     &:hover,
     &:focus,
-    &:focus-within {
+    &:focus-within,
+    &:focus-visible {
         border-color: $primary-blue;
 
         > span::before {
-            background-color: $primary-blue;
+            background-color: rgba($primary-blue, 0.4);
         }
+    }
+
+    &:focus-visible {
+        outline: 2px solid $primary-blue;
     }
 
     input[type=radio] {
